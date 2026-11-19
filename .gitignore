@@ -1,0 +1,31 @@
+
+# Python cache
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local databases
+*.db
+*.db-journal
+
+# Generated banking datasets
+data/*.csv
+bronze/*.csv
+silver/*.csv
+gold/*.csv
+
+# Local environment variables
+.env
+.env.*
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Test cache
+.pytest_cache/
