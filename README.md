@@ -98,3 +98,23 @@ Demonstrate practical data engineering concepts,
 including ETL development, data validation,
 incremental processing, reconciliation,
 SQL analytics, and dashboard visualization.
+
+
+
+## Project Screenshots
+
+### 1. Banking Dashboard Overview
+
+![Banking Dashboard Overview](screenshots/dashboard_overview.png)
+
+### 2. Transaction Analytics
+
+![Transaction Analytics](screenshots/transaction_analytics.png)
+
+### 3. ETL Architecture
+
+![ETL Architecture](screenshots/etl_architecture.png)
+
+### 4. Pipeline Monitoring
+
+![Pipeline Monitoring](screenshots/pipeline_monitoring.png)
