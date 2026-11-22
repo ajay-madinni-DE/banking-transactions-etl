@@ -118,3 +118,80 @@ SQL analytics, and dashboard visualization.
 ### 4. Pipeline Monitoring
 
 ![Pipeline Monitoring](screenshots/pipeline_monitoring.png)
+
+
+## Complete ETL Pipeline Execution
+
+### 1. Install Dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 2. Generate Synthetic Banking Data
+
+```bash
+python generate_data.py
+```
+
+### 3. Load Transactions into SQLite
+
+```bash
+python etl_pipeline.py
+```
+
+### 4. Build Bronze, Silver, and Gold Layers
+
+```bash
+python bronze_layer.py
+python silver_layer.py
+python gold_layer.py
+```
+
+### 5. Initialize Pipeline Monitoring
+
+```bash
+python pipeline_monitor.py
+```
+
+### 6. Generate and Load Incremental Transactions
+
+```bash
+python generate_new_transactions.py
+python incremental_load.py
+```
+
+### 7. Synchronize and Refresh Data Layers
+
+```bash
+python sync_bronze.py
+python silver_layer.py
+python gold_layer.py
+```
+
+### 8. Validate Data Quality and Reconciliation
+
+```bash
+python test_data_quality.py
+python reconcile_data.py
+```
+
+### 9. Launch the Analytics Dashboard
+
+```bash
+python -m streamlit run dashboard.py
+```
+
+Open http://localhost:8501 in your browser.
+
+## Expected Demonstration Results
+
+After the initial load and incremental update:
+
+- 10,500 synthetic banking transactions
+- 500 additional transactions processed
+- Bronze, Silver, and SQLite record counts reconciled
+- Gold-layer summaries grouped by transaction status
+- Interactive analytics and pipeline monitoring dashboard
+
+Results may vary if the synthetic data generation changes.
